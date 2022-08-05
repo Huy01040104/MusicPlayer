@@ -43,7 +43,7 @@ const canvas = $('#canvas')
 let runOnlyOnce = false
 
 const app = {
-    currentTime: '',
+    currentTime: 0,
     isPlaying : false,
     isRandom : false,
     isRepeat : false,
