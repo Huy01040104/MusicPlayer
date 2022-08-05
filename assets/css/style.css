@@ -9,20 +9,19 @@
     --gray-light-color: #ccc;
     --gray-color: #d3d3d3;
     --box-shadow-playlist: rgba(100, 100, 111, 0.2);
-    --background-img: url(../img/background.jpg);
-}
-
-[data-theme="dark"] {
-  --primary-color: rgb(27,205,166);
-  --dashboard-color: rgba(45, 51, 59, .9);
-  --text-color: #fff;
-  --black-color: #fff;
-  --white-color: #000;
-  --hover-btn-background-color: rgba(255, 255, 255, 0.08);
-  --gray-light-color: #666;
-  --gray-color: #d3d3d3;
-  --box-shadow-playlist: rgba(160, 160, 175, 0.2);
-  --background-img: url(../img/background2.jpg) ;
+  }
+  
+  [data-theme="dark"] {
+    --primary-color: rgb(27,205,166);
+    --dashboard-color: rgba(45, 51, 59, .9);
+    --text-color: #fff;
+    --black-color: #fff;
+    --white-color: #000;
+    --hover-btn-background-color: rgba(255, 255, 255, 0.08);
+    --gray-light-color: #666;
+    --gray-color: #d3d3d3;
+    --box-shadow-playlist: rgba(160, 160, 175, 0.2);
+    --background-img: url(../img/background2.jpg) ;
 }
   
   * {
@@ -590,8 +589,9 @@
   100%{height: 5px;}
 }
 
+/* Tablet + PC */
 @media (max-width: 1023px) {
-  :root {
+  /* :root {
     --hover-color: #ddd;
   }
 
@@ -601,7 +601,7 @@
 
   .btn:hover {
     background-color: var(--hover-color);
-  }
+  } */
 }
 
 /* Tablet */
