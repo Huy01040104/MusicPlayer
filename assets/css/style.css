@@ -597,11 +597,11 @@
 
   [data-theme="dark"] {
     --hover-color:rgba(255, 255, 255, 0.08);
-  }
+  } */
 
   .btn:hover {
-    background-color: var(--hover-color);
-  } */
+    background-color: unset;
+  }
 }
 
 /* Tablet */
