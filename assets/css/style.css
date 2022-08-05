@@ -766,6 +766,10 @@
       padding-right: 0;
     }
 
+    .song.active .author {
+      width: 160px;
+    }
+
     .cd {
         margin: 10px auto;
         width: 200px;
