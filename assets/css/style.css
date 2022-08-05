@@ -183,7 +183,6 @@
   
   .control .btn-toggle-play:hover {
     transform: scale(1.1);
-    background-color: var(--primary-color);
   }
 
 .duration-bar {
@@ -590,7 +589,7 @@
   100%{height: 5px;}
 }
 
-/* Tablet + PC */
+/* Tablet + mobile */
 @media (max-width: 1023px) {
   /* :root {
     --hover-color: #ddd;
@@ -602,6 +601,10 @@
 
   .btn:hover {
     background-color: unset;
+  }
+
+  .control .btn-toggle-play:hover  {
+    background-color: var(--primary-color);
   }
 }
 
