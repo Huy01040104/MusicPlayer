@@ -450,9 +450,9 @@ const app = {
     },    
     
     setDefaultState: function() {
-        progressVolume.value = (this.currentVolume * 100)
-        audio.volume = this.currentVolume  
-        this.changeStyleVolume()
+        progressVolume.value = (app.currentVolume * 100)
+        audio.volume = app.currentVolume  
+        app.changeStyleVolume()
 
         randomBtn.classList.toggle('active', app.isRandom)
         repeatBtn.classList.toggle('active', app.isRepeat)
@@ -524,12 +524,12 @@ const app = {
     },
 
     loadConfig: function() {
-        app.isRandom = app.config.isRandom
-        app.isRepeat = app.config.isRepeat
+        app.isRandom = app.config.isRandom || app.isRandom
+        app.isRepeat = app.config.isRepeat || app.isRepeat
         app.currentIndex = app.config.currentIndex || app.currentIndex
         app.isMobile= app.config.isMobile || app.isMobile
         app.isMuted = app.config.isMuted || app.isMuted
-        app.currentTime = app.config.currentTime 
+        app.currentTime = app.config.currentTime || app.currentTime
         app.currentVolume = app.config.currentVolume >= 0 ? app.config.currentVolume : app.currentVolume
         app.volumeBeforeMuted = app.config.volumeBeforeMuted >= 0 ? app.config.volumeBeforeMuted : app.volumeBeforeMuted
     },
