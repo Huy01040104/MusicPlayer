@@ -9,7 +9,20 @@
     --gray-light-color: #ccc;
     --gray-color: #d3d3d3;
     --box-shadow-playlist: rgba(100, 100, 111, 0.2);
+    --background-img: url(../img/background.jpg) ;
   }
+
+  /* [data-theme="light"] {
+    --primary-color: rgb(252,0,71);
+    --text-color: #333;
+    --dashboard-color: rgba(255, 255, 255, 0.9);
+    --black-color: #000;
+    --white-color: #fff;
+    --hover-btn-background-color: rgba(0, 0, 0, 0.08);
+    --gray-light-color: #ccc;
+    --gray-color: #d3d3d3;
+    --box-shadow-playlist: rgba(100, 100, 111, 0.2);
+  } */
   
   [data-theme="dark"] {
     --primary-color: rgb(27,205,166);
@@ -695,7 +708,6 @@
 }
 }
 
-/* Mobile */
 @media (max-width: 739px) {
   
   :root {
@@ -768,7 +780,7 @@
     }
 
     .song.active .author {
-      width: 160px;
+      width: 160px !important;
     }
 
     .cd {
