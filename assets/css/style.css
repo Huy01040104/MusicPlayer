@@ -9,7 +9,7 @@
     --gray-light-color: #ccc;
     --gray-color: #d3d3d3;
     --box-shadow-playlist: rgba(100, 100, 111, 0.2);
-    --background-img: url(/assets/images/background.jpg) ;
+    --background-img: url(../img/background.jpg);
 }
 
 [data-theme="dark"] {
@@ -22,7 +22,7 @@
   --gray-light-color: #666;
   --gray-color: #d3d3d3;
   --box-shadow-playlist: rgba(160, 160, 175, 0.2);
-  --background-img: url(/assets/img/background2.jpg) ;
+  --background-img: url(../img/background2.jpg) ;
 }
   
   * {
