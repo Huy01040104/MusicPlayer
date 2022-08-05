@@ -47,6 +47,7 @@ const app = {
     isPlaying : false,
     isRandom : false,
     isRepeat : false,
+    isMobile: false,
     currentIndex: 0,
     isOnMouseAndTouchOnProgress: false,
     isMuted: false,
@@ -164,14 +165,28 @@ const app = {
     },
 
     handleEvents: function() {
+        window.onresize = function() {
+            if (window.innerWidth < 740) {
+                app.isMobile = true
+            } else {
+                app.isMobile = false
+            }
+            app.setConfig("isMobile", app.isMobile)
+        }
+
         const cdWidth = cd.offsetWidth
         // Handle CD enlargement / reduction
         document.onscroll = function() {
-            const scrollTop =  document.documentElement.scrollTop || window.scrollY
-            const newCdWidth = cdWidth - scrollTop
-
-            cd.style.width = newCdWidth > 0 ? newCdWidth + 'px' : 0
-            cd.style.opacity = newCdWidth / cdWidth
+            if(app.isMobile) {
+                const scrollTop =  document.documentElement.scrollTop || window.scrollY
+                const newCdWidth = cdWidth - scrollTop
+    
+                cd.style.width = newCdWidth > 0 ? newCdWidth + 'px' : 0
+                cd.style.opacity = newCdWidth / cdWidth
+            } else {
+                cd.style.width = '250px'
+                cd.style.opacity = '1'
+            }
         }
 
         // Stat and stop rotate cdThumb
@@ -512,6 +527,7 @@ const app = {
         app.isRandom = app.config.isRandom
         app.isRepeat = app.config.isRepeat
         app.currentIndex = app.config.currentIndex || app.currentIndex
+        app.isMobile= app.config.isMobile || app.isMobile
         app.isMuted = app.config.isMuted || app.isMuted
         app.currentTime = app.config.currentTime 
         app.currentVolume = app.config.currentVolume >= 0 ? app.config.currentVolume : app.currentVolume
